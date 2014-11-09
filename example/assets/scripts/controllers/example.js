@@ -28,7 +28,7 @@ angular.module("angular-google-maps-example", ["google-maps".ns()])
 
 .controller("ExampleController",['$scope', '$timeout', 'Logger'.ns(), '$http', 'rndAddToLatLon','GoogleMapApi'.ns()
     , function ($scope, $timeout, $log, $http, rndAddToLatLon,GoogleMapApi) {
-  $log.doLog = true
+  $log.doLog = true;
 
   GoogleMapApi.then(function(maps) {
     $scope.googleVersion = maps.version;
@@ -577,7 +577,7 @@ angular.module("angular-google-maps-example", ["google-maps".ns()])
   $scope.getMapInstance = function () {
     alert("You have Map Instance of" + $scope.map.control.getGMap().toString());
     return;
-  }
+  };
   $scope.map.clusterOptionsText = JSON.stringify($scope.map.clusterOptions);
   $scope.$watch('map.clusterOptionsText', function (newValue, oldValue) {
     if (newValue !== oldValue)
@@ -623,7 +623,7 @@ angular.module("angular-google-maps-example", ["google-maps".ns()])
         $log.log(marker.getPosition().lng());
       }
     }
-  }
+  };
   $scope.onMarkerClicked = onMarkerClicked;
 
   $scope.clackMarker = function (gMarker,eventName, model) {
